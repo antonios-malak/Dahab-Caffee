@@ -1,0 +1,286 @@
+/* start variables  */
+:root { --main-color: #24a1a1;}
+:root { --sec-color: #777 }
+:root { --third-color:#1f4b4b}
+:root { --main-background: #f6f6f6 }
+
+/* end global variables */
+/* global Rules */
+* {-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+  }
+  body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+ 
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:15PX ;
+    padding-right: 15PX;
+  }
+  
+  @media (min-width=768px){
+    .container{width: 750;}
+  }
+  @media (min-width=992px){
+    .container{width: 970;}
+  }
+  @media (min-width=1200px){
+    .container{width: 1170;}
+  }
+  /* end global rules  */
+  /* start components  */
+  .special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 0 ;
+  }
+  @media (max-width:767px){
+    .special-heading{font-size: 50px;}
+  }
+  /* end components  */
+  /* start header */
+  .header{
+    padding: 15PX ;
+  }
+   
+   .header .container{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center 
+   }
+   .header .logo { 
+    width:60px;
+    
+   }
+   .header .links {
+    position:relative
+   }
+   .header .links .icon {
+    font-size: 30px;
+   }
+
+   .header .links  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff ;
+    position: absolute;
+    right: 0;
+    top:/ 100%;
+    width: 200px;
+    display: none;
+   }
+
+   .header .links:hover ul
+   {display: block;}
+   
+   .header .logo {border-radius: 5px ;}
+
+   .header .links ul li {
+    margin: 5px;
+   }
+   .header .links ul li a {
+    text-decoration: none;
+    color: rgb(128, 84, 128);
+    display: block;
+    padding: 5px;
+    transition: .3s
+   }
+   .header .links ul li:hover
+    a { padding-left:15px; }
+
+  /* end header */
+  /* start landing*/
+  .landing{
+    background-image: url(../images/coffee.jpg);
+    background-size: cover;
+    height: calc(100VH - 110PX);
+    position: relative
+    ;
+  }
+  .landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.40); /* White overlay with 50% opacity */
+    z-index: 1; /* Place it below the content */
+}
+.container > * {
+  position: relative;
+  z-index: 2;
+}
+  .landing .welcome-text {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  .landing .welcome-text h1 {
+    font-size: 50px ;
+    margin: 0;
+    color: var(--main-color);
+    text-align: center;
+    font-weight: 800;
+  }
+  .landing .welcome-text p {
+    text-align: center;
+    color: var(--third-color);
+    font-size: 25px ;
+    font-weight:600;
+    letter-spacing: -.5px;
+  }
+
+  /* end landing */
+  /* start about */
+  .about{
+    padding:20px;
+    text-align: center;
+  }
+  /* .about .container h3 {
+    color: var(--main-color) ;
+    font-weight: bold;
+    font-size: 30px;
+  } */
+  .about .container p {
+    color: var(--sec-color);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  /* end about */
+  /* start services */
+  .services {
+    padding: 60px 0 ;
+    background-color:var(--main-background);
+  }
+   /* .services  h3 {
+    color: var(--main-color);
+    font-size: 30px;
+    margin-top : 0 ;
+    padding-bottom: 30px ;
+    text-align: center; 
+  } */
+
+  .services .container {
+    display: grid ;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap : 25px ;
+    text-align: center;
+  }
+ 
+  .services i {
+    color : var(--main-color);
+    font-size: 30px ;
+    
+  }
+  .services h4 { 
+    font-weight: 800px ;
+    margin: 30 0 
+  }
+  .services p {
+    color: var(--sec-color);
+    line-height: 1.8 ;
+  }
+  /* end services */
+  /* start book your table */
+  .book {
+    padding : 25px
+  }
+  /* .book h3{
+    color: var(--main-color);
+    font-weight: 800px;
+    font-size: 30px;
+    text-align: center;
+  } */
+  .book .container{
+    text-align: center;
+    border-style: dashed;
+    border-color: var(--main-color);
+    border-width: 2px ;
+  }
+ 
+ 
+  .book div {
+    margin: 40px 0 ; 
+    line-height: 1.5;
+  }
+  .book div i {
+    color: var(--main-color);
+    font-size: 30px;
+  }
+  .book div h5 {
+    color: var(--third-color);
+    margin-top: 5px ;
+    margin-bottom: 10px ;
+  }
+  .book div Label {
+    color: var(--sec-color);
+  
+  }
+  .book div input {
+    border-color:var(--main-color);
+    border-width: .5px;
+    border-radius: 3px;
+    border-style:solid;
+  }
+  .book input:last-of-type {
+    margin-bottom:35px;
+    color: var(--main-color);
+    background-color: none;
+  }
+  /* end book your table  */
+  /* start contact */
+  .contact{
+    background-color: var(--main-background);
+    padding:30px 0 
+  }
+  .contact .container {
+    text-align: center;
+    
+  }
+  .contact h3 {
+    font-size: 25px;
+    color: var(--third-color);
+    letter-spacing: -2px ;
+    font-weight: 800;
+  }
+  .contact .email {
+    display: block;
+    font-size: 25px ;
+    color: var(--main-color);
+    text-decoration: none;
+    letter-spacing: -1px ;
+    font-weight: 800;
+  }
+  
+  .contact .info {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 ;
+
+  }
+  .contact .info a {
+    margin-left: 5px ;
+    color: var(--third-color);
+    
+  }
+  /* end contact */
+  /* start footer */
+  .footer{
+    background-color: var(--third-color);
+    text-align: center;
+    color: white;
+    padding: 30px 0 
+  }
+  .footer .tag {
+    color: var(--main-color);
+  }
+  /* end footer */
