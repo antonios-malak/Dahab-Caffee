@@ -98,7 +98,7 @@
   /* end header */
   /* start landing*/
   .landing{
-    background-image: url(../images/coffee.jpg);
+    background-image: url(../Images/coffee.jpg);
     background-size: cover;
     height: calc(100VH - 110PX);
     position: relative
