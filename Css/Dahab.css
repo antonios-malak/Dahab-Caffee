@@ -61,7 +61,7 @@
    .header .links {
     position:relative
    }
-   .header .links .icon {
+   .header .links i {
     font-size: 30px;
    }
 
@@ -72,7 +72,7 @@
     background-color: #fff ;
     position: absolute;
     right: 0;
-    top:/ 100%;
+    top:100%;
     width: 200px;
     display: none;
    }
